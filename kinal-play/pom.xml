@@ -5,14 +5,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.5.5</version>
+		<version>3.5.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>org.datacoins</groupId>
 	<artifactId>kinal-play</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>kinal-play</name>
-	<description>Demo de IN5CV para intro a SpringBoot 2024433</description>
+	<description>Demo de IN5CV para intro a SpringBoot 2024422</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -81,10 +81,10 @@
 							<version>${lombok.version}</version>
 						</path>
 					</annotationProcessorPaths>
-					<compilerArgs>
-						<arg>-Amapstruct.defaultComponentModel=spring</arg>
-					</compilerArgs>
-				</configuration>
+					<compilerArgs>--enable-preview</compilerArgs>
+                    <source>21</source>
+                    <target>21</target>
+                </configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
