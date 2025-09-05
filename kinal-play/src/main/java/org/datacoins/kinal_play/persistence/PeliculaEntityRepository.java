@@ -1,12 +1,11 @@
-package org.datacoins.kinal_play.persistence.entity;
+package org.datacoins.kinal_play.persistence;
 
 import org.datacoins.kinal_play.dominio.dto.PeliculaDto;
-import org.datacoins.kinal_play.dominio.dto.repository.PeliculaRepository;
+import org.datacoins.kinal_play.dominio.repository.PeliculaRepository;
 import org.datacoins.kinal_play.persistence.crud.CrudPeliculaEntity;
 import org.datacoins.kinal_play.web.mapper.PeliculaMapper;
 import org.springframework.stereotype.Repository;
 
-import java.util.Collections;
 import java.util.List;
 
 @Repository

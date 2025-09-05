@@ -1,4 +1,4 @@
-package org.datacoins.kinal_play.dominio.dto.repository;
+package org.datacoins.kinal_play.dominio.repository;
 
 import org.datacoins.kinal_play.dominio.dto.PeliculaDto;
 
