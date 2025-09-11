@@ -1,4 +1,4 @@
-package org.datacoins.kinal_play;
+package org.kaven.kinal_play;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class KinalPlayApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(KinalPlayApplication.class, args);
 	}
 
