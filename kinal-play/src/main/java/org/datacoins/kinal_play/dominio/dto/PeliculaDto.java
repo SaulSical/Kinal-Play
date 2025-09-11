@@ -9,6 +9,6 @@ public record PeliculaDto(
         Integer duration,
         Genre genre,
         LocalDate releaseDate,
-        double rating
+        Double rating
 ) {
 }
