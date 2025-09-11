@@ -1,10 +1,11 @@
-package org.datacoins.kinal_play.dominio.dto;
+package org.kaven.kinal_play.dominio.dto;
 
-import org.datacoins.kinal_play.dominio.Genre;
+import org.kaven.kinal_play.dominio.Genre;
 
 import java.time.LocalDate;
 
 public record PeliculaDto(
+        Long codigo,
         String name,
         Integer duration,
         Genre genre,
