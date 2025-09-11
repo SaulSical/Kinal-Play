@@ -1,5 +1,10 @@
 package org.kaven.kinal_play.web.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.kaven.kinal_play.dominio.dto.ModPeliculaDto;
 import org.kaven.kinal_play.dominio.dto.PeliculaDto;
 import org.kaven.kinal_play.dominio.service.PeliculaService;
@@ -11,6 +16,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/v1/peliculas")
+@Tag(name = "Peliculas", description = "Operaciones (CRUD) sbre las peliculas de kinal-play")
 public class PeliculaController {
     private final PeliculaService peliculaService;
 
@@ -29,7 +35,17 @@ public class PeliculaController {
 
     // 4
     @GetMapping("{codigo}")
-    public ResponseEntity<PeliculaDto> obtenerPeliculaPorCodigo(@PathVariable Long codigo){
+    @Operation(
+            summary = "Obtener una pelicula a partir de su codigo",
+            description = "Retorna la pelicula que conicidad con el identificador enviado",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "Pelicula Fue econtrada con exito"),
+                    @ApiResponse(responseCode = "404", description = "Pelicula no fue encontrada", content = @Content)
+            }
+
+    )
+    public ResponseEntity<PeliculaDto> obtenerPeliculaPorCodigo
+    (@Parameter(description = "Identificador de la Pelicula a recuperar", example = "5") @PathVariable Long codigo){
         return  ResponseEntity.ok(this.peliculaService.obtenerPeliculaPorCodigo(codigo));
     }
 
